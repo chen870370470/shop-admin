@@ -1,14 +1,5 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-// eslint-disable-next-line no-undef
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>{{ props.msg }}</h1>
 
   <p>
     Recommended IDE setup:
@@ -50,7 +41,13 @@ const count = ref(0)
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
 </template>
+<script lang="ts" setup>
+import { ref } from 'vue'
 
+const props = defineProps<{ msg: string }>()
+
+const count = ref(0)
+</script>
 <style scoped>
 a {
   color: #42b983;
