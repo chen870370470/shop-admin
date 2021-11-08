@@ -3,6 +3,13 @@
   <div>{{ $store.state.count }}</div>
 </template>
 
-<script lang='ts' setup></script>
+<script lang="ts" setup>
+import User from '@/api/user'
+console.log(User)
+</script>
 
-<style lang='scss' scoped></style>
+<style lang="scss" scoped>
+h1 {
+  color: $color;
+}
+</style>
